@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SOLBOT — Paper-Trading Strategy Lab</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+  <style>
+    :root {
+      --bg: #0d1117; --panel: #161b22; --border: #30363d;
+      --text: #e6edf3; --muted: #8b949e; --green: #3fb950; --red: #f85149;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; padding: 24px; background: var(--bg); color: var(--text);
+      font: 14px/1.5 ui-monospace, SFMono-Regular, Consolas, monospace;
+      max-width: 1000px; margin-inline: auto;
+    }
+    h1 { font-size: 20px; margin: 0 0 4px; }
+    .sub { color: var(--muted); margin-bottom: 20px; }
+    .sub img { vertical-align: middle; }
+    .panel {
+      background: var(--panel); border: 1px solid var(--border);
+      border-radius: 8px; padding: 16px; margin-bottom: 20px;
+    }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { text-align: right; padding: 6px 10px; border-bottom: 1px solid var(--border); white-space: nowrap; }
+    th { color: var(--muted); font-weight: 600; }
+    th:first-child, td:first-child { text-align: left; }
+    tr.invalid td { opacity: 0.45; }
+    tr.benchmark td:first-child::after { content: " (benchmark)"; color: var(--muted); font-size: 11px; }
+    .pos { color: var(--green); } .neg { color: var(--red); }
+    .note { color: var(--muted); font-size: 12px; margin-top: 8px; }
+    #status { color: var(--muted); }
+    canvas { max-height: 360px; }
+  </style>
+</head>
+<body>
+  <h1>SOLBOT — SOL/USDC Paper-Trading Lab</h1>
+  <div class="sub">
+    Phase 1: 12 strategies vs HODL, SOL-denominated, pessimistic fills. No real trades.
+    <a href="https://github.com/WesWuy/SOLBOT/actions/workflows/tick.yml">
+      <img src="https://github.com/WesWuy/SOLBOT/actions/workflows/tick.yml/badge.svg" alt="tick status" />
+    </a>
+    <div id="status">loading…</div>
+  </div>
+
+  <div class="panel">
+    <h2 style="font-size:15px;margin:0 0 10px">Leaderboard (SOL-denominated)</h2>
+    <div style="overflow-x:auto"><table id="leaderboard">
+      <thead><tr>
+        <th>Strategy</th><th>Equity (SOL)</th><th>vs HODL</th><th>Closed trades</th>
+        <th>Win rate</th><th>Max DD</th><th>Failed orders</th>
+      </tr></thead>
+      <tbody></tbody>
+    </table></div>
+    <div class="note">Greyed-out rows have &lt;30 closed trades — not statistically valid yet.</div>
+  </div>
+
+  <div class="panel">
+    <h2 style="font-size:15px;margin:0 0 10px">Equity curves (SOL)</h2>
+    <canvas id="equityChart"></canvas>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

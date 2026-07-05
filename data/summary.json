@@ -1,0 +1,36 @@
+{
+ "generatedAt": 1783268060889,
+ "startedAt": 1783268029236,
+ "price": 81.22912393138023,
+ "minTradesForValidity": 30,
+ "strategies": [
+  {
+   "id": "ut-bot",
+   "name": "UT Bot ATR trail",
+   "equitySol": 12.310855412459798,
+   "equityUsdc": 1000,
+   "vsHodlPct": 0.31433646918391583,
+   "closedTrades": 0,
+   "totalOrders": 0,
+   "failedOrders": 0,
+   "winRatePct": null,
+   "maxDrawdownPct": 0.012826304505491536,
+   "statisticallyValid": false,
+   "isBenchmark": false
+  },
+  {
+   "id": "hodl",
+   "name": "HODL benchmark",
+   "equitySol": 12.272279163449019,
+   "equityUsdc": 996.8664850882957,
+   "vsHodlPct": null,
+   "closedTrades": 0,
+   "totalOrders": 1,
+   "failedOrders": 0,
+   "winRatePct": null,
+   "maxDrawdownPct": 0,
+   "statisticallyValid": false,
+   "isBenchmark": true
+  }
+ ]
+}

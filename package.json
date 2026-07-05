@@ -1,0 +1,20 @@
+{
+  "name": "solbot",
+  "version": "0.1.0",
+  "private": true,
+  "description": "SOL/USDC paper-trading strategy lab (Phase 1) - no keys, no wallets, no swaps",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "tick": "tsx src/tick.ts",
+    "simulate": "tsx src/simulate.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^20.17.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}
