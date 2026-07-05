@@ -6,7 +6,7 @@
  * STATE_VERSION and migrating data/state.json.
  */
 
-export const STATE_VERSION = 1;
+export const STATE_VERSION = 2;
 
 /** One price sample per engine tick (~15 min via Actions cron). */
 export interface PricePoint {
@@ -78,11 +78,21 @@ export interface TradeRecord {
   portfolioAfter: PortfolioState;
 }
 
-/** Per-strategy persistent state (data/state.json). */
+/**
+ * Per-strategy persistent state (data/state.json).
+ *
+ * Win accounting is USDC-denominated per cycle: a cycle opens when a buy
+ * takes the portfolio from flat to long and closes when a sell returns it to
+ * flat; it is a win if the sells brought back more USDC than the buys spent.
+ * (SOL-denominated equity at the instant a cycle closes is path-independent
+ * and always ≈ break-even minus fees, so it cannot define a win.)
+ */
 export interface StrategyState {
   portfolio: PortfolioState;
-  /** SOL-denominated equity at the start of the currently open buy->sell cycle. */
-  cycleStartEquitySol: number | null;
+  /** USDC spent on buys during the currently open cycle. */
+  cycleUsdcSpent: number;
+  /** USDC received from sells during the currently open cycle. */
+  cycleUsdcReceived: number;
   closedTrades: number;
   wins: number;
   failedOrders: number;

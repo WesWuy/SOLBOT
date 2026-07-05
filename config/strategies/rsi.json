@@ -1,0 +1,5 @@
+{
+  "period": 14,
+  "buyBelow": 30,
+  "sellAbove": 70
+}

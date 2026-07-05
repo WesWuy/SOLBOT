@@ -1,0 +1,8 @@
+{
+  "rsiPeriod": 14,
+  "stochPeriod": 14,
+  "kSmooth": 3,
+  "dSmooth": 3,
+  "oversold": 20,
+  "overbought": 80
+}

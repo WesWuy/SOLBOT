@@ -35,12 +35,24 @@ function writeJson(path: string, value: unknown): void {
 }
 
 export function loadState(): EngineState {
-  return readJson<EngineState>(join(dataDir(), 'state.json'), {
+  const state = readJson<EngineState>(join(dataDir(), 'state.json'), {
     version: STATE_VERSION,
     startedAt: null,
     lastRun: null,
     strategies: {},
   });
+  // v1 -> v2: win accounting moved from SOL-equity snapshots to per-cycle
+  // USDC cashflow (cycleStartEquitySol replaced by spent/received).
+  if (state.version < 2) {
+    for (const s of Object.values(state.strategies)) {
+      const legacy = s as StrategyState & { cycleStartEquitySol?: number | null };
+      delete legacy.cycleStartEquitySol;
+      s.cycleUsdcSpent ??= 0;
+      s.cycleUsdcReceived ??= 0;
+    }
+    state.version = 2;
+  }
+  return state;
 }
 
 export function initStrategyState(state: EngineState, id: string): StrategyState {
@@ -48,7 +60,8 @@ export function initStrategyState(state: EngineState, id: string): StrategyState
   if (!s) {
     s = {
       portfolio: { sol: 0, usdc: STARTING_USDC },
-      cycleStartEquitySol: null,
+      cycleUsdcSpent: 0,
+      cycleUsdcReceived: 0,
       closedTrades: 0,
       wins: 0,
       failedOrders: 0,

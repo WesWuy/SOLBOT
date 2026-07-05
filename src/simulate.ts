@@ -64,21 +64,48 @@ for (let i = 0; i < 200; i++) {
 for (const p of series) runTick(entries, p);
 
 const state = loadState();
+
+// Generic invariants for every registered strategy.
+for (const { strategy } of entries) {
+  const s = state.strategies[strategy.id]!;
+  assert(s, `${strategy.id} has state`);
+  assert(s.portfolio.sol >= 0 && s.portfolio.usdc >= 0, `${strategy.id} balances non-negative`);
+  const eq = s.portfolio.sol + s.portfolio.usdc / mid;
+  assert(eq > 0, `${strategy.id} equity positive`);
+  console.log(
+    `[sim]   ${strategy.id.padEnd(10)} equity ${eq.toFixed(4).padStart(8)} SOL, ` +
+      `${loadTrades(strategy.id).filter((t) => !t.failed).length} fills, ` +
+      `${s.closedTrades} closed, ${s.wins} wins, ${s.failedOrders} failed`,
+  );
+}
+
+// Strategy-specific behavior on the flat -> up -> down series.
 const ut = state.strategies['ut-bot']!;
 const hodl = state.strategies['hodl']!;
 const utTrades = loadTrades('ut-bot').filter((t) => !t.failed);
 const hodlTrades = loadTrades('hodl').filter((t) => !t.failed);
+const dcaTrades = loadTrades('dca').filter((t) => !t.failed);
+const gridTrades = loadTrades('grid').filter((t) => !t.failed);
+const emaTrades = loadTrades('ema-cross').filter((t) => !t.failed);
 
 assert(hodlTrades.length === 1 && hodlTrades[0]!.side === 'buy', 'HODL buys exactly once');
 assert(hodl.portfolio.sol > 0, 'HODL holds SOL');
 assert(utTrades.some((t) => t.side === 'buy'), 'UT Bot entered on the uptrend');
 assert(utTrades.some((t) => t.side === 'sell'), 'UT Bot exited on the downtrend');
 assert(ut.closedTrades >= 1, 'UT Bot closed at least one cycle');
-console.log(
-  `[sim] engine OK — UT Bot: ${utTrades.length} fills, ${ut.closedTrades} closed, ${ut.wins} wins, ` +
-    `${ut.failedOrders} failed orders, final equity ${(ut.portfolio.sol + ut.portfolio.usdc / mid).toFixed(4)} SOL; ` +
-    `HODL final equity ${(hodl.portfolio.sol + hodl.portfolio.usdc / mid).toFixed(4)} SOL`,
+assert(ut.wins >= 1, 'UT Bot cycle on a clean trend is a USDC-denominated win');
+assert(emaTrades.some((t) => t.side === 'buy'), 'EMA cross entered on the uptrend');
+assert(emaTrades.some((t) => t.side === 'sell'), 'EMA cross exited on the downtrend');
+// 200 ticks * 15min = 50h -> 3 scheduled DCA buys (t=0, 24h, 48h).
+assert(
+  dcaTrades.length >= 2 && dcaTrades.length <= 4 && dcaTrades.every((t) => t.side === 'buy'),
+  `DCA buys once per 24h window, got ${dcaTrades.length}`,
 );
+assert(state.strategies['dca']!.portfolio.usdc > 900, 'DCA spends only its scheduled budget');
+// The ±0.8%/tick trend walks through several 2% grid steps both ways.
+assert(gridTrades.some((t) => t.side === 'sell'), 'grid sold into the uptrend');
+assert(gridTrades.some((t) => t.side === 'buy'), 'grid bought the initial rebalance or downtrend');
+console.log('[sim] strategy-specific behavior OK');
 
 rmSync(scratch, { recursive: true, force: true });
 console.log('[sim] all assertions passed');

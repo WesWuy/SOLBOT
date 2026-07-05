@@ -41,16 +41,16 @@ Every 15 minutes a GitHub Actions cron run:
 | # | Strategy | Status |
 |---|----------|--------|
 | 1 | UT Bot ATR trail | ✅ live |
-| 2 | Stoch RSI mean-reversion | planned |
-| 3 | EMA 9/21 cross | planned |
-| 4 | Donchian breakout (20) | planned |
-| 5 | Bollinger mean-reversion | planned |
-| 6 | RSI(14) 30/70 | planned |
-| 7 | MACD signal cross | planned |
-| 8 | VWAP deviation | planned |
-| 9 | Momentum (ROC 12) | planned |
-| 10 | Grid (±2% bands, 5 levels) | planned |
-| 11 | DCA benchmark (control) | planned |
+| 2 | Stoch RSI mean-reversion | ✅ live |
+| 3 | EMA 9/21 cross | ✅ live |
+| 4 | Donchian breakout (20) | ✅ live |
+| 5 | Bollinger mean-reversion | ✅ live |
+| 6 | RSI(14) 30/70 | ✅ live |
+| 7 | MACD signal cross | ✅ live |
+| 8 | VWAP deviation | ✅ live |
+| 9 | Momentum (ROC 12) | ✅ live |
+| 10 | Grid (±2% bands, 5 levels) | ✅ live |
+| 11 | DCA benchmark (control) | ✅ live |
 | 12 | HODL benchmark (control) | ✅ live |
 
 All strategies implement the frozen `Strategy` interface in

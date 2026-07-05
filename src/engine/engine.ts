@@ -79,7 +79,6 @@ export function runTick(entries: StrategyEntry[], price: PricePoint): TickOutcom
 
     if (sig.action !== 'hold') {
       const wasFlat = s.portfolio.sol < DUST_SOL;
-      const equityBefore = equitySol(s, price.mid);
       const fill = applyFill(
         sig.action === 'buy'
           ? { side: 'buy', sizeUsdc: sig.sizeUsdc }
@@ -108,15 +107,22 @@ export function runTick(entries: StrategyEntry[], price: PricePoint): TickOutcom
         if (s.portfolio.usdc < 0) s.portfolio.usdc = 0;
 
         const isFlat = s.portfolio.sol < DUST_SOL;
-        if (fill.side === 'buy' && wasFlat) {
-          s.cycleStartEquitySol = equityBefore;
-        } else if (fill.side === 'sell' && isFlat) {
-          s.closedTrades += 1;
-          const equityAfter = equitySol(s, price.mid);
-          if (s.cycleStartEquitySol !== null && equityAfter > s.cycleStartEquitySol) {
-            s.wins += 1;
+        if (fill.side === 'buy') {
+          if (wasFlat) {
+            // new cycle opens
+            s.cycleUsdcSpent = 0;
+            s.cycleUsdcReceived = 0;
           }
-          s.cycleStartEquitySol = null;
+          s.cycleUsdcSpent += -fill.usdcDelta;
+        } else {
+          s.cycleUsdcReceived += fill.usdcDelta;
+          if (isFlat) {
+            // cycle closed: win iff the sells returned more USDC than the buys spent
+            s.closedTrades += 1;
+            if (s.cycleUsdcReceived > s.cycleUsdcSpent) s.wins += 1;
+            s.cycleUsdcSpent = 0;
+            s.cycleUsdcReceived = 0;
+          }
         }
 
         appendTrade(strategy.id, {
