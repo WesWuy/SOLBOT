@@ -32,5 +32,22 @@
    "sol": 0.391981369229634,
    "usdc": 968
   }
+ },
+ {
+  "ts": 1783446318118,
+  "side": "buy",
+  "mid": 82.68452453144769,
+  "failed": false,
+  "fillPrice": 82.80855131824487,
+  "solDelta": 0.19267863083870848,
+  "usdcDelta": -16,
+  "feeUsdc": 0.028,
+  "txCostSol": 0.0002,
+  "slippagePct": 0.0015,
+  "reason": "scheduled DCA buy #3",
+  "portfolioAfter": {
+   "sol": 0.5846600000683425,
+   "usdc": 952
+  }
  }
 ]
