@@ -1,0 +1,19 @@
+[
+ {
+  "ts": 1783502146580,
+  "side": "buy",
+  "mid": 77.09588802887775,
+  "failed": false,
+  "fillPrice": 77.21153186092107,
+  "solDelta": 12.928568228535076,
+  "usdcDelta": -1000,
+  "feeUsdc": 1.75,
+  "txCostSol": 0.0002,
+  "slippagePct": 0.0015,
+  "reason": "RSI 27.6 below 30",
+  "portfolioAfter": {
+   "sol": 12.928568228535076,
+   "usdc": 0
+  }
+ }
+]
