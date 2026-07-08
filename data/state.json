@@ -1,7 +1,7 @@
 {
  "version": 2,
  "startedAt": 1783268029236,
- "lastRun": 1783502146580,
+ "lastRun": 1783509865576,
  "strategies": {
   "ut-bot": {
    "portfolio": {
@@ -122,7 +122,7 @@
    "cycleUsdcReceived": 311.831780172414,
    "closedTrades": 0,
    "wins": 0,
-   "failedOrders": 1
+   "failedOrders": 2
   },
   "dca": {
    "portfolio": {
