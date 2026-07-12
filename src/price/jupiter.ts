@@ -18,10 +18,12 @@ const USDC_DECIMALS = 6;
 const QUOTE_SOL = 1; // 1 SOL notional (sell side)
 const QUOTE_USDC = 1000; // 1000 USDC notional (buy side)
 
-// v6 endpoint per spec, with the lite-api successor as fallback.
+// lite-api first: the legacy v6 endpoint stopped responding (observed
+// 2026-07-12), so trying it first cost a failed request every call. v6 is
+// kept as fallback in case lite-api is ever unavailable.
 const ENDPOINTS = [
-  'https://quote-api.jup.ag/v6/quote',
   'https://lite-api.jup.ag/swap/v1/quote',
+  'https://quote-api.jup.ag/v6/quote',
 ];
 
 async function quote(inputMint: string, outputMint: string, amount: bigint): Promise<bigint> {
