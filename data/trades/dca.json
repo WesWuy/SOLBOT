@@ -1,138 +1,19 @@
 [
  {
-  "ts": 1783281190585,
+  "ts": 1783879069125,
   "side": "buy",
-  "mid": 80.92262437699613,
+  "mid": 77.32501236497765,
   "failed": false,
-  "fillPrice": 81.04400831356162,
-  "solDelta": 0.196878110181864,
+  "fillPrice": 77.44099988352512,
+  "solDelta": 0.2060473369923249,
   "usdcDelta": -16,
   "feeUsdc": 0.028,
   "txCostSol": 0.0002,
   "slippagePct": 0.0015,
   "reason": "scheduled DCA buy #1",
   "portfolioAfter": {
-   "sol": 0.196878110181864,
+   "sol": 0.2060473369923249,
    "usdc": 984
-  }
- },
- {
-  "ts": 1783355187580,
-  "side": "buy",
-  "mid": 81.65802230301969,
-  "failed": false,
-  "fillPrice": 81.78050933647422,
-  "solDelta": 0.19510325904777,
-  "usdcDelta": -16,
-  "feeUsdc": 0.028,
-  "txCostSol": 0.0002,
-  "slippagePct": 0.0015,
-  "reason": "scheduled DCA buy #2",
-  "portfolioAfter": {
-   "sol": 0.391981369229634,
-   "usdc": 968
-  }
- },
- {
-  "ts": 1783446318118,
-  "side": "buy",
-  "mid": 82.68452453144769,
-  "failed": false,
-  "fillPrice": 82.80855131824487,
-  "solDelta": 0.19267863083870848,
-  "usdcDelta": -16,
-  "feeUsdc": 0.028,
-  "txCostSol": 0.0002,
-  "slippagePct": 0.0015,
-  "reason": "scheduled DCA buy #3",
-  "portfolioAfter": {
-   "sol": 0.5846600000683425,
-   "usdc": 952
-  }
- },
- {
-  "ts": 1783530713978,
-  "side": "buy",
-  "mid": 77.07154382090658,
-  "failed": false,
-  "fillPrice": 77.18715113663795,
-  "solDelta": 0.20672563159542065,
-  "usdcDelta": -16,
-  "feeUsdc": 0.028,
-  "txCostSol": 0.0002,
-  "slippagePct": 0.0015,
-  "reason": "scheduled DCA buy #4",
-  "portfolioAfter": {
-   "sol": 0.7913856316637632,
-   "usdc": 936
-  }
- },
- {
-  "ts": 1783615435682,
-  "side": "buy",
-  "mid": 77.64518241245875,
-  "failed": false,
-  "fillPrice": 77.76165018607745,
-  "solDelta": 0.20519687573219283,
-  "usdcDelta": -16,
-  "feeUsdc": 0.028,
-  "txCostSol": 0.0002,
-  "slippagePct": 0.0015,
-  "reason": "scheduled DCA buy #5",
-  "portfolioAfter": {
-   "sol": 0.996582507395956,
-   "usdc": 920
-  }
- },
- {
-  "ts": 1783703483708,
-  "side": "buy",
-  "mid": 77.83090904350587,
-  "failed": false,
-  "fillPrice": 77.94765540707114,
-  "solDelta": 0.20470674051180088,
-  "usdcDelta": -16,
-  "feeUsdc": 0.028,
-  "txCostSol": 0.0002,
-  "slippagePct": 0.0015,
-  "reason": "scheduled DCA buy #6",
-  "portfolioAfter": {
-   "sol": 1.2012892479077568,
-   "usdc": 904
-  }
- },
- {
-  "ts": 1783787312227,
-  "side": "buy",
-  "mid": 78.09381101170452,
-  "failed": false,
-  "fillPrice": 78.21095172822208,
-  "solDelta": 0.20401692419114972,
-  "usdcDelta": -16,
-  "feeUsdc": 0.028,
-  "txCostSol": 0.0002,
-  "slippagePct": 0.0015,
-  "reason": "scheduled DCA buy #7",
-  "portfolioAfter": {
-   "sol": 1.4053061720989066,
-   "usdc": 888
-  }
- },
- {
-  "ts": 1783874375949,
-  "side": "buy",
-  "mid": 77.37604729270635,
-  "failed": false,
-  "fillPrice": 77.4921113636454,
-  "solDelta": 0.2059113024143654,
-  "usdcDelta": -16,
-  "feeUsdc": 0.028,
-  "txCostSol": 0.0002,
-  "slippagePct": 0.0015,
-  "reason": "scheduled DCA buy #8",
-  "portfolioAfter": {
-   "sol": 1.6112174745132721,
-   "usdc": 872
   }
  }
 ]

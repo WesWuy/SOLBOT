@@ -11,8 +11,33 @@ outperforms buy-and-hold SOL, **measured in SOL**, after realistic costs.
 ## ⛔ Evaluation gate (Phase 2 go/no-go)
 
 > **A strategy is a candidate ONLY if, after 60 days AND ≥30 closed trades, it
-> outperforms HODL in SOL-denominated terms with max drawdown <20%.
+> outperforms HODL in SOL-denominated terms by a margin of at least +5% with
+> max drawdown <20%. Even then, Phase 2 requires a fresh 30-day out-of-sample
+> confirmation window after selection — the chosen strategy must still beat
+> HODL over that window before any live-trading decision.
 > Otherwise Phase 2 (live trading) does not proceed.**
+
+Why the margin and confirmation window: we are testing 10 active strategies
+and will pick the best one, and the best of 10 noisy performance estimates is
+biased upward — it can win by luck alone. The +5% margin and the out-of-sample
+confirmation exist to filter out that multiple-comparison bias.
+
+### Statistical caveats
+
+- **Selection effect.** Promoting the best of 10 strategies means the winner's
+  measured edge is inflated by construction (the maximum of noisy estimates is
+  an upward-biased statistic). Hence the +5% margin over HODL and the 30-day
+  out-of-sample confirmation window above — merely edging out HODL in-sample
+  is not evidence of an edge.
+- **Regime dependence.** One 60-day window is a single draw from a single
+  market regime. The day-60 report must therefore also show each strategy's
+  performance split by rising vs falling weeks; a trend-follower that only won
+  because the window trended (or a mean-reverter that only won because it
+  chopped) gets flagged as regime-dependent in the final writeup.
+- **SOL-denominated scoring flatters risk-off.** Holding USDC through a SOL
+  drawdown looks like alpha when equity is scored in SOL, so short windows
+  systematically flatter risk-off strategies. Judgment is reserved for the
+  full 60-day window.
 
 ## Safety constraints (Phase 1)
 
@@ -21,7 +46,7 @@ outperforms buy-and-hold SOL, **measured in SOL**, after realistic costs.
 
 ## How it works
 
-Every 15 minutes a GitHub Actions cron run:
+Every 15 minutes (an hourly GitHub Actions job that takes 4 samples per run):
 
 1. Quotes SOL→USDC and USDC→SOL on the Jupiter Quote API (v6, with lite-api
    fallback) to get a mid price + spread estimate, appended to `data/prices.json`.
@@ -93,3 +118,7 @@ npm run typecheck
 - Data files are committed with `[skip ci]` to avoid workflow loops.
 - The dashboard greys out any strategy with <30 closed trades
   (statistical-validity flag).
+- The tick workflow uses an hourly cron with an internal 15-minute sampling
+  loop, because GitHub throttles `*/15` schedules (observed ~88 of ~680
+  expected runs in week 1). The experiment state was reset on 2026-07-12 when
+  this was fixed; the malformed week-1 data is archived under `archive/`.

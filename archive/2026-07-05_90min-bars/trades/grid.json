@@ -1,0 +1,301 @@
+[
+ {
+  "ts": 1783281190585,
+  "side": "buy",
+  "mid": 80.92262437699613,
+  "failed": false,
+  "fillPrice": 81.04400831356162,
+  "solDelta": 6.15849094318325,
+  "usdcDelta": -500,
+  "feeUsdc": 0.875,
+  "txCostSol": 0.0002,
+  "slippagePct": 0.0015,
+  "reason": "grid step 0: SOL 0% -> target 50%",
+  "portfolioAfter": {
+   "sol": 6.15849094318325,
+   "usdc": 500
+  }
+ },
+ {
+  "ts": 1783327653407,
+  "side": "buy",
+  "mid": 80.37038401368332,
+  "failed": false,
+  "fillPrice": 80.49093958970386,
+  "solDelta": 1.2650027656425706,
+  "usdcDelta": -102.0158871806285,
+  "feeUsdc": 0.17852780256609987,
+  "txCostSol": 0.0002,
+  "slippagePct": 0.0015,
+  "reason": "grid step -1: SOL 50% -> target 60%",
+  "portfolioAfter": {
+   "sol": 7.423493708825821,
+   "usdc": 397.9841128193715
+  }
+ },
+ {
+  "ts": 1783355187580,
+  "side": "sell",
+  "mid": 81.65802230301969,
+  "failed": false,
+  "fillPrice": 81.53553526956517,
+  "solDelta": -1.2750514851954384,
+  "usdcDelta": 103.76379326269965,
+  "feeUsdc": 0.1819049719105679,
+  "txCostSol": 0.0002,
+  "slippagePct": 0.0015,
+  "reason": "grid step 0: SOL 60% -> target 50%",
+  "portfolioAfter": {
+   "sol": 6.148442223630383,
+   "usdc": 501.74790608207115
+  }
+ },
+ {
+  "ts": 1783375214310,
+  "side": "sell",
+  "mid": 82.74981827963023,
+  "failed": false,
+  "fillPrice": 82.62569355221079,
+  "solDelta": -1.2638924861724377,
+  "usdcDelta": 104.23074453752847,
+  "feeUsdc": 0.18272356918675162,
+  "txCostSol": 0.0002,
+  "slippagePct": 0.0015,
+  "reason": "grid step 1: SOL 50% -> target 40%",
+  "portfolioAfter": {
+   "sol": 4.884549737457945,
+   "usdc": 605.9786506195996
+  }
+ },
+ {
+  "ts": 1783403162192,
+  "side": "buy",
+  "mid": 80.95785153014933,
+  "failed": false,
+  "fillPrice": 81.07928830744456,
+  "solDelta": 1.29586194487731,
+  "usdcDelta": -105.26799909142473,
+  "feeUsdc": 0.18421899840999328,
+  "txCostSol": 0.0002,
+  "slippagePct": 0.0015,
+  "reason": "grid step 0: SOL 39% -> target 50%",
+  "portfolioAfter": {
+   "sol": 6.180411682335255,
+   "usdc": 500.71065152817494
+  }
+ },
+ {
+  "ts": 1783438578872,
+  "side": "sell",
+  "mid": 82.10343034158596,
+  "failed": false,
+  "fillPrice": 81.98027519607359,
+  "solDelta": -1.26903297057232,
+  "usdcDelta": 103.83724237218594,
+  "feeUsdc": 0.18203373318439808,
+  "txCostSol": 0.0002,
+  "slippagePct": 0.0015,
+  "reason": "grid step 1: SOL 50% -> target 40%",
+  "portfolioAfter": {
+   "sol": 4.911378711762936,
+   "usdc": 604.5478939003609
+  }
+ },
+ {
+  "ts": 1783454806560,
+  "side": "buy",
+  "mid": 81.19151475931011,
+  "failed": false,
+  "fillPrice": 81.31330203144908,
+  "solDelta": 1.2629727329617009,
+  "usdcDelta": -102.89280836784951,
+  "feeUsdc": 0.18006241464373665,
+  "txCostSol": 0.0002,
+  "slippagePct": 0.0015,
+  "reason": "grid step 0: SOL 40% -> target 50%",
+  "portfolioAfter": {
+   "sol": 6.174351444724636,
+   "usdc": 501.6550855325114
+  }
+ },
+ {
+  "ts": 1783482444388,
+  "side": "buy",
+  "mid": 78.95636835334265,
+  "failed": false,
+  "fillPrice": 79.07480290587267,
+  "solDelta": 1.3378472140725368,
+  "usdcDelta": -105.99130451443813,
+  "feeUsdc": 0.18548478290026674,
+  "txCostSol": 0.0002,
+  "slippagePct": 0.0015,
+  "reason": "grid step -1: SOL 49% -> target 60%",
+  "portfolioAfter": {
+   "sol": 7.512198658797173,
+   "usdc": 395.6637810180733
+  }
+ },
+ {
+  "ts": 1783492484257,
+  "side": "buy",
+  "mid": 78.13096199220618,
+  "failed": false,
+  "fillPrice": 78.2481584351945,
+  "solDelta": 1.2868271871565724,
+  "usdcDelta": -100.88405434613593,
+  "feeUsdc": 0.17654709510573788,
+  "txCostSol": 0.0002,
+  "slippagePct": 0.0015,
+  "reason": "grid step -2: SOL 60% -> target 70%",
+  "portfolioAfter": {
+   "sol": 8.799025845953745,
+   "usdc": 294.77972667193734
+  }
+ },
+ {
+  "ts": 1783502146580,
+  "side": "buy",
+  "mid": 77.09588802887775,
+  "failed": true,
+  "reason": "grid step -3: SOL 70% -> target 80% (order failed: random-failure)",
+  "portfolioAfter": {
+   "sol": 8.799025845953745,
+   "usdc": 294.77972667193734
+  }
+ },
+ {
+  "ts": 1783509865576,
+  "side": "buy",
+  "mid": 77.03893727313378,
+  "failed": true,
+  "reason": "grid step -3: SOL 70% -> target 80% (order failed: random-failure)",
+  "portfolioAfter": {
+   "sol": 8.799025845953745,
+   "usdc": 294.77972667193734
+  }
+ },
+ {
+  "ts": 1783516190589,
+  "side": "buy",
+  "mid": 76.87220841110549,
+  "failed": true,
+  "reason": "grid step -3: SOL 70% -> target 80% (order failed: random-failure)",
+  "portfolioAfter": {
+   "sol": 8.799025845953745,
+   "usdc": 294.77972667193734
+  }
+ },
+ {
+  "ts": 1783524988906,
+  "side": "buy",
+  "mid": 76.55543248564405,
+  "failed": false,
+  "fillPrice": 76.67026563437251,
+  "solDelta": 1.3161409269221933,
+  "usdcDelta": -101.10113551968013,
+  "feeUsdc": 0.17692698715944022,
+  "txCostSol": 0.0002,
+  "slippagePct": 0.0015,
+  "reason": "grid step -3: SOL 70% -> target 80%",
+  "portfolioAfter": {
+   "sol": 10.115166772875938,
+   "usdc": 193.6785911522572
+  }
+ },
+ {
+  "ts": 1783542308534,
+  "side": "sell",
+  "mid": 77.30783001286407,
+  "failed": true,
+  "reason": "grid step -2: SOL 80% -> target 70% (order failed: random-failure)",
+  "portfolioAfter": {
+   "sol": 10.115166772875938,
+   "usdc": 193.6785911522572
+  }
+ },
+ {
+  "ts": 1783550853998,
+  "side": "sell",
+  "mid": 77.43571015288478,
+  "failed": false,
+  "fillPrice": 77.31955658765546,
+  "solDelta": -1.2839426390086548,
+  "usdcDelta": 99.08470940047941,
+  "feeUsdc": 0.1737022203364277,
+  "txCostSol": 0.0002,
+  "slippagePct": 0.0015,
+  "reason": "grid step -2: SOL 80% -> target 70%",
+  "portfolioAfter": {
+   "sol": 8.831224133867282,
+   "usdc": 292.7633005527366
+  }
+ },
+ {
+  "ts": 1783662175075,
+  "side": "sell",
+  "mid": 79.14767206470344,
+  "failed": false,
+  "fillPrice": 79.02895055660639,
+  "solDelta": -1.3133195097473453,
+  "usdcDelta": 103.59285151131938,
+  "feeUsdc": 0.1816052994187918,
+  "txCostSol": 0.0002,
+  "slippagePct": 0.0015,
+  "reason": "grid step -1: SOL 70% -> target 60%",
+  "portfolioAfter": {
+   "sol": 7.517904624119937,
+   "usdc": 396.356152064056
+  }
+ },
+ {
+  "ts": 1783695830984,
+  "side": "buy",
+  "mid": 77.96354325877547,
+  "failed": false,
+  "fillPrice": 78.08048857366364,
+  "solDelta": 1.2989048288937828,
+  "usdcDelta": -101.61256173146232,
+  "feeUsdc": 0.17782198303005906,
+  "txCostSol": 0.0002,
+  "slippagePct": 0.0015,
+  "reason": "grid step -2: SOL 60% -> target 70%",
+  "portfolioAfter": {
+   "sol": 8.81680945301372,
+   "usdc": 294.74359033259367
+  }
+ },
+ {
+  "ts": 1783815208452,
+  "side": "buy",
+  "mid": 76.57572602025358,
+  "failed": false,
+  "fillPrice": 76.69058960928396,
+  "solDelta": 1.3114057458612471,
+  "usdcDelta": -100.76415525672296,
+  "feeUsdc": 0.1763372716992652,
+  "txCostSol": 0.0002,
+  "slippagePct": 0.0015,
+  "reason": "grid step -3: SOL 70% -> target 80%",
+  "portfolioAfter": {
+   "sol": 10.128215198874967,
+   "usdc": 193.9794350758707
+  }
+ },
+ {
+  "ts": 1783863821684,
+  "side": "sell",
+  "mid": 77.27275452721659,
+  "failed": false,
+  "fillPrice": 77.15684539542578,
+  "solDelta": -1.2814397087574563,
+  "usdcDelta": 98.68341539836402,
+  "feeUsdc": 0.17299872471538896,
+  "txCostSol": 0.0002,
+  "slippagePct": 0.0015,
+  "reason": "grid step -2: SOL 80% -> target 70%",
+  "portfolioAfter": {
+   "sol": 8.84677549011751,
+   "usdc": 292.6628504742347
+  }
+ }
+]

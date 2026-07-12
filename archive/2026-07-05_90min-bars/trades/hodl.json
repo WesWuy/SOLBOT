@@ -1,18 +1,18 @@
 [
  {
-  "ts": 1783879069125,
+  "ts": 1783268029236,
   "side": "buy",
-  "mid": 77.32501236497765,
+  "mid": 81.21870523659764,
   "failed": false,
-  "fillPrice": 77.44099988352512,
-  "solDelta": 12.890258562020307,
+  "fillPrice": 81.34053329445254,
+  "solDelta": 12.272279163449019,
   "usdcDelta": -1000,
   "feeUsdc": 1.75,
   "txCostSol": 0.0002,
   "slippagePct": 0.0015,
   "reason": "initial one-time buy",
   "portfolioAfter": {
-   "sol": 12.890258562020307,
+   "sol": 12.272279163449019,
    "usdc": 0
   }
  }

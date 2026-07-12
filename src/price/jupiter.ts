@@ -1,8 +1,12 @@
 /**
  * SOL/USDC pricing from the Jupiter Quote API. Quote-only — no swaps are ever
- * built, signed, or sent. Both directions are quoted to estimate mid + spread:
- *   sell side: 1 SOL -> USDC        => pSell (USDC per SOL)
- *   buy side:  that USDC -> SOL     => pBuy  (USDC per SOL)
+ * built, signed, or sent. Both directions are quoted INDEPENDENTLY at fixed
+ * notionals to estimate mid + spread:
+ *   sell side: 1 SOL -> USDC     => pSell (USDC per SOL)
+ *   buy side:  1000 USDC -> SOL  => pBuy  (USDC per SOL)
+ * (Feeding the sell quote's outAmount back into the buy quote round-trips the
+ * same notional through the same pools, which cancels price impact and made
+ * the measured spread ~0.)
  */
 
 import type { PricePoint } from '../types.js';
@@ -11,7 +15,8 @@ const SOL_MINT = 'So11111111111111111111111111111111111111112';
 const USDC_MINT = 'EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v';
 const SOL_DECIMALS = 9;
 const USDC_DECIMALS = 6;
-const QUOTE_SOL = 1; // 1 SOL notional
+const QUOTE_SOL = 1; // 1 SOL notional (sell side)
+const QUOTE_USDC = 1000; // 1000 USDC notional (buy side)
 
 // v6 endpoint per spec, with the lite-api successor as fallback.
 const ENDPOINTS = [
@@ -43,14 +48,16 @@ async function quote(inputMint: string, outputMint: string, amount: bigint): Pro
 }
 
 export async function fetchPrice(now = Date.now()): Promise<PricePoint> {
+  // Sell side: 1 SOL -> USDC.
   const lamportsIn = BigInt(QUOTE_SOL * 10 ** SOL_DECIMALS);
   const usdcOut = await quote(SOL_MINT, USDC_MINT, lamportsIn);
   const pSell = Number(usdcOut) / 10 ** USDC_DECIMALS / QUOTE_SOL;
 
-  // Round-trip the USDC back into SOL to estimate the buy-side price.
-  const solOut = await quote(USDC_MINT, SOL_MINT, usdcOut);
+  // Buy side: independent fixed notional, 1000 USDC -> SOL.
+  const usdcIn = BigInt(QUOTE_USDC * 10 ** USDC_DECIMALS);
+  const solOut = await quote(USDC_MINT, SOL_MINT, usdcIn);
   const solOutUi = Number(solOut) / 10 ** SOL_DECIMALS;
-  const pBuy = Number(usdcOut) / 10 ** USDC_DECIMALS / solOutUi;
+  const pBuy = QUOTE_USDC / solOutUi;
 
   const mid = (pSell + pBuy) / 2;
   const spreadPct = Math.max(0, (pBuy - pSell) / mid);
