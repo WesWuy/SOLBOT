@@ -8,31 +8,54 @@
   <style>
     :root {
       --bg: #0d1117; --panel: #161b22; --border: #30363d;
-      --text: #e6edf3; --muted: #8b949e; --green: #3fb950; --red: #f85149;
+      --text: #e6edf3; --muted: #8b949e;
+      --good: #3fb950; --warn: #d29922; --bad: #f85149;
     }
     * { box-sizing: border-box; }
     body {
-      margin: 0; padding: 24px; background: var(--bg); color: var(--text);
+      margin: 0 auto; padding: 24px; background: var(--bg); color: var(--text);
       font: 14px/1.5 ui-monospace, SFMono-Regular, Consolas, monospace;
-      max-width: 1000px; margin-inline: auto;
+      max-width: 1080px;
     }
     h1 { font-size: 20px; margin: 0 0 4px; }
-    .sub { color: var(--muted); margin-bottom: 20px; }
+    h2 { font-size: 15px; margin: 0 0 10px; }
+    .sub { color: var(--muted); margin-bottom: 16px; }
     .sub img { vertical-align: middle; }
     .panel {
       background: var(--panel); border: 1px solid var(--border);
       border-radius: 8px; padding: 16px; margin-bottom: 20px;
     }
+    /* health tiles */
+    .tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 12px; margin-bottom: 20px; }
+    .tile { background: var(--panel); border: 1px solid var(--border); border-radius: 8px; padding: 12px 14px; }
+    .tile .label { color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: .05em; }
+    .tile .value { font-size: 20px; margin: 2px 0; }
+    .tile .detail { color: var(--muted); font-size: 12px; }
+    .tile .bar { height: 4px; background: var(--border); border-radius: 2px; margin-top: 8px; overflow: hidden; }
+    .tile .bar > div { height: 100%; background: var(--good); }
+    .status-good { color: var(--good); } .status-warn { color: var(--warn); } .status-bad { color: var(--bad); }
+    /* leaderboard */
     table { width: 100%; border-collapse: collapse; }
     th, td { text-align: right; padding: 6px 10px; border-bottom: 1px solid var(--border); white-space: nowrap; }
     th { color: var(--muted); font-weight: 600; }
     th:first-child, td:first-child { text-align: left; }
+    #leaderboard tbody tr { cursor: pointer; }
+    #leaderboard tbody tr:hover { background: #1c2129; }
+    #leaderboard tbody tr.selected { background: #20262f; outline: 1px solid var(--border); }
     tr.invalid td { opacity: 0.45; }
-    tr.benchmark td:first-child::after { content: " (benchmark)"; color: var(--muted); font-size: 11px; }
-    .pos { color: var(--green); } .neg { color: var(--red); }
+    .chip { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 8px; vertical-align: baseline; }
+    .chip.dashed { background: repeating-linear-gradient(90deg, currentColor 0 3px, transparent 3px 5px); height: 3px; margin-bottom: 3px; }
+    .badge { font-size: 11px; border: 1px solid var(--border); border-radius: 10px; padding: 0 8px; color: var(--muted); margin-left: 8px; }
+    .bench { color: var(--muted); font-size: 11px; }
+    .pos { color: var(--good); } .neg { color: var(--bad); }
     .note { color: var(--muted); font-size: 12px; margin-top: 8px; }
-    #status { color: var(--muted); }
-    canvas { max-height: 360px; }
+    canvas { max-height: 380px; }
+    /* trade log */
+    #tradePanel { display: none; }
+    #tradePanel.open { display: block; }
+    #tradeLog td.fail { color: var(--bad); }
+    .reason { max-width: 380px; overflow: hidden; text-overflow: ellipsis; }
+    .tablewrap { overflow-x: auto; }
   </style>
 </head>
 <body>
@@ -45,21 +68,34 @@
     <div id="status">loading…</div>
   </div>
 
+  <div class="tiles" id="tiles"></div>
+
   <div class="panel">
-    <h2 style="font-size:15px;margin:0 0 10px">Leaderboard (SOL-denominated)</h2>
-    <div style="overflow-x:auto"><table id="leaderboard">
+    <h2>Leaderboard (SOL-denominated) — hover to highlight, click for trades</h2>
+    <div class="tablewrap"><table id="leaderboard">
       <thead><tr>
-        <th>Strategy</th><th>Equity (SOL)</th><th>vs HODL</th><th>Closed trades</th>
-        <th>Win rate</th><th>Max DD</th><th>Failed orders</th>
+        <th>Strategy</th><th>Equity (SOL)</th><th>vs HODL</th><th>Closed</th>
+        <th>Win rate</th><th>Max DD</th><th>Failed</th>
       </tr></thead>
       <tbody></tbody>
     </table></div>
-    <div class="note">Greyed-out rows have &lt;30 closed trades — not statistically valid yet.</div>
+    <div class="note">Greyed-out rows have fewer than 30 closed trades — not statistically valid yet. Benchmarks are dashed on the chart.</div>
   </div>
 
   <div class="panel">
-    <h2 style="font-size:15px;margin:0 0 10px">Equity curves (SOL)</h2>
+    <h2>Equity curves (SOL)</h2>
     <canvas id="equityChart"></canvas>
+  </div>
+
+  <div class="panel" id="tradePanel">
+    <h2 id="tradeTitle">Trades</h2>
+    <div class="tablewrap"><table id="tradeLog">
+      <thead><tr>
+        <th>Time (UTC)</th><th>Side</th><th>Fill</th><th>SOL Δ</th><th>USDC Δ</th><th style="text-align:left">Reason</th>
+      </tr></thead>
+      <tbody></tbody>
+    </table></div>
+    <div class="note" id="tradeNote"></div>
   </div>
 
   <script src="app.js"></script>
