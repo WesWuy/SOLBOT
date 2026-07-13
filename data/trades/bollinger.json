@@ -1,0 +1,13 @@
+[
+ {
+  "ts": 1783950543945,
+  "side": "buy",
+  "mid": 75.12693867241411,
+  "failed": true,
+  "reason": "close 75.13 below lower band 75.24 (order failed: random-failure)",
+  "portfolioAfter": {
+   "sol": 0,
+   "usdc": 1000
+  }
+ }
+]
