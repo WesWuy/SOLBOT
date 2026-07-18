@@ -168,5 +168,16 @@
    "sol": 0,
    "usdc": 961.9865848935926
   }
+ },
+ {
+  "ts": 1784393561376,
+  "side": "buy",
+  "mid": 75.22779339153348,
+  "failed": true,
+  "reason": "ROC(12) 0.70% above +0.5% (order failed: random-failure)",
+  "portfolioAfter": {
+   "sol": 0,
+   "usdc": 961.9865848935926
+  }
  }
 ]
