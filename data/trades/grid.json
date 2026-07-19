@@ -485,5 +485,16 @@
    "sol": 7.823586060881494,
    "usdc": 391.23628741253225
   }
+ },
+ {
+  "ts": 1784472669792,
+  "side": "sell",
+  "mid": 76.5810341222799,
+  "failed": true,
+  "reason": "grid step 0: SOL 60% -> target 50% (order failed: random-failure)",
+  "portfolioAfter": {
+   "sol": 7.823586060881494,
+   "usdc": 391.23628741253225
+  }
  }
 ]
