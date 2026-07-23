@@ -240,5 +240,16 @@
    "sol": 2.2890074485396075,
    "usdc": 824
   }
+ },
+ {
+  "ts": 1784829706409,
+  "side": "buy",
+  "mid": 75.63660432875459,
+  "failed": true,
+  "reason": "scheduled DCA buy #12 (order failed: random-failure)",
+  "portfolioAfter": {
+   "sol": 2.2890074485396075,
+   "usdc": 824
+  }
  }
 ]
