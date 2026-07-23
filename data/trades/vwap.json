@@ -32,5 +32,16 @@
    "sol": 0,
    "usdc": 983.1080227762416
   }
+ },
+ {
+  "ts": 1784819109525,
+  "side": "buy",
+  "mid": 76.24023010660302,
+  "failed": true,
+  "reason": "close 76.24 more than 1.5% below 24h TWAP 77.84 (order failed: random-failure)",
+  "portfolioAfter": {
+   "sol": 0,
+   "usdc": 983.1080227762416
+  }
  }
 ]
