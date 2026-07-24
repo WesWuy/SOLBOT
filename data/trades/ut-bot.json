@@ -2573,5 +2573,22 @@
    "sol": 7.755182398747113,
    "usdc": 0
   }
+ },
+ {
+  "ts": 1784910754440,
+  "side": "sell",
+  "mid": 73.91997344404959,
+  "failed": false,
+  "fillPrice": 73.80909348388352,
+  "solDelta": -7.7553823987471135,
+  "usdcDelta": 571.4012774340497,
+  "feeUsdc": 1.001705219643964,
+  "txCostSol": 0.0002,
+  "slippagePct": 0.0015,
+  "reason": "close below ATR trail",
+  "portfolioAfter": {
+   "sol": 0,
+   "usdc": 571.4012774340497
+  }
  }
 ]
