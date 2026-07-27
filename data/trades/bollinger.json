@@ -382,5 +382,16 @@
    "sol": 0,
    "usdc": 939.0207852266273
   }
+ },
+ {
+  "ts": 1785168804029,
+  "side": "buy",
+  "mid": 75.28134080071382,
+  "failed": true,
+  "reason": "close 75.28 below lower band 75.79 (order failed: random-failure)",
+  "portfolioAfter": {
+   "sol": 0,
+   "usdc": 939.0207852266273
+  }
  }
 ]
