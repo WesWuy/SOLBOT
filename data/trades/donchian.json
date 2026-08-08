@@ -960,5 +960,22 @@
    "sol": 0,
    "usdc": 813.878909785816
   }
+ },
+ {
+  "ts": 1786159254930,
+  "side": "buy",
+  "mid": 74.01752893853066,
+  "failed": false,
+  "fillPrice": 74.12855523193846,
+  "solDelta": 10.959876304625492,
+  "usdcDelta": -813.878909785816,
+  "feeUsdc": 1.424288092125178,
+  "txCostSol": 0.0002,
+  "slippagePct": 0.0015,
+  "reason": "close 74.02 broke above 20-bar high 73.91",
+  "portfolioAfter": {
+   "sol": 10.959876304625492,
+   "usdc": 0
+  }
  }
 ]
