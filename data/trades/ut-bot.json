@@ -5770,5 +5770,16 @@
    "sol": 0,
    "usdc": 314.01467672729274
   }
+ },
+ {
+  "ts": 1786281017540,
+  "side": "buy",
+  "mid": 76.50421677976556,
+  "failed": true,
+  "reason": "close above ATR trail (order failed: random-failure)",
+  "portfolioAfter": {
+   "sol": 0,
+   "usdc": 314.01467672729274
+  }
  }
 ]
