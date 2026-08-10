@@ -1220,5 +1220,16 @@
    "sol": 0,
    "usdc": 765.5553557855703
   }
+ },
+ {
+  "ts": 1786380064638,
+  "side": "buy",
+  "mid": 75.92505645818412,
+  "failed": true,
+  "reason": "%K 9.0 above %D 4.4 in oversold (<20) (order failed: random-failure)",
+  "portfolioAfter": {
+   "sol": 0,
+   "usdc": 765.5553557855703
+  }
  }
 ]
