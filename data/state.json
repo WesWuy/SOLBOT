@@ -1,7 +1,7 @@
 {
  "version": 2,
  "startedAt": 1783879069125,
- "lastRun": 1786460555363,
+ "lastRun": 1786463794413,
  "strategies": {
   "ut-bot": {
    "portfolio": {
@@ -82,10 +82,10 @@
   },
   "vwap": {
    "portfolio": {
-    "sol": 0,
-    "usdc": 964.813957597771
+    "sol": 12.864014606573718,
+    "usdc": 0
    },
-   "cycleUsdcSpent": 0,
+   "cycleUsdcSpent": 964.813957597771,
    "cycleUsdcReceived": 0,
    "closedTrades": 5,
    "wins": 2,
@@ -104,10 +104,10 @@
   },
   "grid": {
    "portfolio": {
-    "sol": 7.687083795674758,
-    "usdc": 391.8868721846638
+    "sol": 9.045861249971555,
+    "usdc": 289.9637889599622
    },
-   "cycleUsdcSpent": 6228.090385124174,
+   "cycleUsdcSpent": 6330.013468348875,
    "cycleUsdcReceived": 5619.977257308837,
    "closedTrades": 0,
    "wins": 0,
