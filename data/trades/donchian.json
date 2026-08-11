@@ -1198,5 +1198,16 @@
    "sol": 0,
    "usdc": 787.8362995968512
   }
+ },
+ {
+  "ts": 1786479309762,
+  "side": "buy",
+  "mid": 76.03253001921124,
+  "failed": true,
+  "reason": "close 76.03 broke above 20-bar high 75.63 (order failed: random-failure)",
+  "portfolioAfter": {
+   "sol": 0,
+   "usdc": 787.8362995968512
+  }
  }
 ]
