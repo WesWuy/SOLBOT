@@ -1,14 +1,14 @@
 {
  "version": 2,
  "startedAt": 1783879069125,
- "lastRun": 1786546305725,
+ "lastRun": 1786547207872,
  "strategies": {
   "ut-bot": {
    "portfolio": {
-    "sol": 0,
-    "usdc": 273.31692832948687
+    "sol": 3.6001131282783114,
+    "usdc": 0
    },
-   "cycleUsdcSpent": 0,
+   "cycleUsdcSpent": 273.31692832948687,
    "cycleUsdcReceived": 0,
    "closedTrades": 184,
    "wins": 9,
@@ -16,10 +16,10 @@
   },
   "stoch-rsi": {
    "portfolio": {
-    "sol": 0,
-    "usdc": 748.5713457685848
+    "sol": 9.860481737117409,
+    "usdc": 0
    },
-   "cycleUsdcSpent": 0,
+   "cycleUsdcSpent": 748.5713457685848,
    "cycleUsdcReceived": 0,
    "closedTrades": 39,
    "wins": 8,
