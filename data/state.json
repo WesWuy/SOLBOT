@@ -1,7 +1,7 @@
 {
  "version": 2,
  "startedAt": 1783879069125,
- "lastRun": 1786828590103,
+ "lastRun": 1786829492615,
  "strategies": {
   "ut-bot": {
    "portfolio": {
@@ -38,10 +38,10 @@
   },
   "donchian": {
    "portfolio": {
-    "sol": 0,
-    "usdc": 743.0927872198577
+    "sol": 9.79865650178379,
+    "usdc": 0
    },
-   "cycleUsdcSpent": 0,
+   "cycleUsdcSpent": 743.0927872198577,
    "cycleUsdcReceived": 0,
    "closedTrades": 41,
    "wins": 5,
@@ -71,10 +71,10 @@
   },
   "macd": {
    "portfolio": {
-    "sol": 0,
-    "usdc": 614.6672586678053
+    "sol": 8.105162301476112,
+    "usdc": 0
    },
-   "cycleUsdcSpent": 0,
+   "cycleUsdcSpent": 614.6672586678053,
    "cycleUsdcReceived": 0,
    "closedTrades": 69,
    "wins": 10,
