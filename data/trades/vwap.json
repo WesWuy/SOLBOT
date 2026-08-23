@@ -241,5 +241,22 @@
    "sol": 10.497897253385155,
    "usdc": 0
   }
+ },
+ {
+  "ts": 1787479679810,
+  "side": "sell",
+  "mid": 93.70990372459386,
+  "failed": false,
+  "fillPrice": 93.56933886900697,
+  "solDelta": -10.498097253385154,
+  "usdcDelta": 980.5623132293636,
+  "feeUsdc": 1.718992284649523,
+  "txCostSol": 0.0002,
+  "slippagePct": 0.0015,
+  "reason": "close 93.71 reverted to 24h TWAP 93.69",
+  "portfolioAfter": {
+   "sol": 0,
+   "usdc": 980.5623132293636
+  }
  }
 ]
