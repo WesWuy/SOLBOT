@@ -1,7 +1,7 @@
 {
  "version": 2,
  "startedAt": 1783879069125,
- "lastRun": 1787455659169,
+ "lastRun": 1787456561310,
  "strategies": {
   "ut-bot": {
    "portfolio": {
@@ -71,12 +71,12 @@
   },
   "macd": {
    "portfolio": {
-    "sol": 6.1243740733216105,
-    "usdc": 0
+    "sol": 0,
+    "usdc": 571.8382294537042
    },
-   "cycleUsdcSpent": 589.2485555475641,
+   "cycleUsdcSpent": 0,
    "cycleUsdcReceived": 0,
-   "closedTrades": 94,
+   "closedTrades": 95,
    "wins": 17,
    "failedOrders": 21
   },
