@@ -1,7 +1,7 @@
 {
  "version": 2,
  "startedAt": 1783879069125,
- "lastRun": 1787554970302,
+ "lastRun": 1787555873157,
  "strategies": {
   "ut-bot": {
    "portfolio": {
@@ -27,10 +27,10 @@
   },
   "ema-cross": {
    "portfolio": {
-    "sol": 0,
-    "usdc": 773.12676760532
+    "sol": 8.107505568827698,
+    "usdc": 0
    },
-   "cycleUsdcSpent": 0,
+   "cycleUsdcSpent": 773.12676760532,
    "cycleUsdcReceived": 0,
    "closedTrades": 53,
    "wins": 12,
@@ -38,10 +38,10 @@
   },
   "donchian": {
    "portfolio": {
-    "sol": 0,
-    "usdc": 745.5244586227135
+    "sol": 7.818042826586923,
+    "usdc": 0
    },
-   "cycleUsdcSpent": 0,
+   "cycleUsdcSpent": 745.5244586227135,
    "cycleUsdcReceived": 0,
    "closedTrades": 59,
    "wins": 10,
