@@ -2476,5 +2476,22 @@
    "sol": 0,
    "usdc": 720.4124404074796
   }
+ },
+ {
+  "ts": 1787634248044,
+  "side": "buy",
+  "mid": 101.60257278337531,
+  "failed": false,
+  "fillPrice": 101.75497664255037,
+  "solDelta": 7.067284484449701,
+  "usdcDelta": -720.4124404074796,
+  "feeUsdc": 1.2607217707130893,
+  "txCostSol": 0.0002,
+  "slippagePct": 0.0015,
+  "reason": "%K 7.1 above %D 4.8 in oversold (<20)",
+  "portfolioAfter": {
+   "sol": 7.067284484449701,
+   "usdc": 0
+  }
  }
 ]
