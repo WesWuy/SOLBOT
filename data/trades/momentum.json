@@ -2050,5 +2050,16 @@
    "sol": 8.151346707915453,
    "usdc": 0
   }
+ },
+ {
+  "ts": 1787726383043,
+  "side": "sell",
+  "mid": 96.5819339005433,
+  "failed": true,
+  "reason": "ROC(12) -0.69% below -0.5% (order failed: random-failure)",
+  "portfolioAfter": {
+   "sol": 8.151346707915453,
+   "usdc": 0
+  }
  }
 ]
