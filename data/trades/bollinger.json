@@ -1689,5 +1689,16 @@
    "sol": 8.345828953675474,
    "usdc": 0
   }
+ },
+ {
+  "ts": 1787713206427,
+  "side": "sell",
+  "mid": 97.25228841288872,
+  "failed": true,
+  "reason": "close 97.25 at/above middle band 97.04 (order failed: random-failure)",
+  "portfolioAfter": {
+   "sol": 8.345828953675474,
+   "usdc": 0
+  }
  }
 ]
