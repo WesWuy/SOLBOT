@@ -1,14 +1,14 @@
 {
  "version": 2,
  "startedAt": 1783879069125,
- "lastRun": 1787702772455,
+ "lastRun": 1787706116145,
  "strategies": {
   "ut-bot": {
    "portfolio": {
-    "sol": 0,
-    "usdc": 130.41378170052226
+    "sol": 1.3411432598570723,
+    "usdc": 0
    },
-   "cycleUsdcSpent": 0,
+   "cycleUsdcSpent": 130.41378170052226,
    "cycleUsdcReceived": 0,
    "closedTrades": 319,
    "wins": 28,
@@ -100,7 +100,7 @@
    "cycleUsdcReceived": 0,
    "closedTrades": 55,
    "wins": 15,
-   "failedOrders": 14
+   "failedOrders": 15
   },
   "grid": {
    "portfolio": {
