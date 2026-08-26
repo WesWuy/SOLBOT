@@ -1,7 +1,7 @@
 {
  "version": 2,
  "startedAt": 1783879069125,
- "lastRun": 1787741123048,
+ "lastRun": 1787742025963,
  "strategies": {
   "ut-bot": {
    "portfolio": {
@@ -34,7 +34,7 @@
    "cycleUsdcReceived": 0,
    "closedTrades": 59,
    "wins": 13,
-   "failedOrders": 9
+   "failedOrders": 10
   },
   "donchian": {
    "portfolio": {
@@ -49,13 +49,13 @@
   },
   "bollinger": {
    "portfolio": {
-    "sol": 8.353862550582873,
-    "usdc": 0
+    "sol": 0,
+    "usdc": 811.444622856694
    },
-   "cycleUsdcSpent": 807.7592372887921,
+   "cycleUsdcSpent": 0,
    "cycleUsdcReceived": 0,
-   "closedTrades": 47,
-   "wins": 12,
+   "closedTrades": 48,
+   "wins": 13,
    "failedOrders": 12
   },
   "rsi": {
