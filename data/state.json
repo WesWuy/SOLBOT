@@ -1,16 +1,16 @@
 {
  "version": 2,
  "startedAt": 1783879069125,
- "lastRun": 1788646913367,
+ "lastRun": 1788647816004,
  "strategies": {
   "ut-bot": {
    "portfolio": {
-    "sol": 1.1740405291201252,
-    "usdc": 0
+    "sol": 0,
+    "usdc": 120.97379169802241
    },
-   "cycleUsdcSpent": 122.33446934668432,
+   "cycleUsdcSpent": 0,
    "cycleUsdcReceived": 0,
-   "closedTrades": 343,
+   "closedTrades": 344,
    "wins": 33,
    "failedOrders": 55
   },
@@ -71,13 +71,13 @@
   },
   "macd": {
    "portfolio": {
-    "sol": 5.692028150846459,
-    "usdc": 0
+    "sol": 0,
+    "usdc": 586.5097590590287
    },
-   "cycleUsdcSpent": 581.7926204354469,
+   "cycleUsdcSpent": 0,
    "cycleUsdcReceived": 0,
-   "closedTrades": 113,
-   "wins": 22,
+   "closedTrades": 114,
+   "wins": 23,
    "failedOrders": 25
   },
   "vwap": {
