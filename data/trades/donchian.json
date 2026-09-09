@@ -2596,5 +2596,16 @@
    "sol": 7.023783872904544,
    "usdc": 0
   }
+ },
+ {
+  "ts": 1788973155393,
+  "side": "sell",
+  "mid": 103.39116200257637,
+  "failed": true,
+  "reason": "close 103.39 below channel mid 103.99 (order failed: random-failure)",
+  "portfolioAfter": {
+   "sol": 7.023783872904544,
+   "usdc": 0
+  }
  }
 ]
