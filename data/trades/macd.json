@@ -4381,5 +4381,22 @@
    "sol": 5.440514034884415,
    "usdc": 0
   }
+ },
+ {
+  "ts": 1789084437859,
+  "side": "sell",
+  "mid": 98.78327927300745,
+  "failed": false,
+  "fillPrice": 98.63510435409795,
+  "solDelta": -5.440714034884415,
+  "usdcDelta": 535.6865746490099,
+  "feeUsdc": 0.9390949217488278,
+  "txCostSol": 0.0002,
+  "slippagePct": 0.0015,
+  "reason": "MACD -0.701 below signal -0.693",
+  "portfolioAfter": {
+   "sol": 0,
+   "usdc": 535.6865746490099
+  }
  }
 ]
