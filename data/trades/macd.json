@@ -4353,5 +4353,16 @@
    "sol": 0,
    "usdc": 545.2814423536437
   }
+ },
+ {
+  "ts": 1789077068480,
+  "side": "buy",
+  "mid": 99.9097739957405,
+  "failed": true,
+  "reason": "MACD -0.680 above signal -0.712 (order failed: random-failure)",
+  "portfolioAfter": {
+   "sol": 0,
+   "usdc": 545.2814423536437
+  }
  }
 ]
