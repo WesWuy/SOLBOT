@@ -474,5 +474,16 @@
    "sol": 0,
    "usdc": 1100.8267022963128
   }
+ },
+ {
+  "ts": 1790187123109,
+  "side": "buy",
+  "mid": 114.14518898758791,
+  "failed": true,
+  "reason": "RSI 29.2 below 30 (order failed: random-failure)",
+  "portfolioAfter": {
+   "sol": 0,
+   "usdc": 1100.8267022963128
+  }
  }
 ]
