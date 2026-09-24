@@ -1,7 +1,7 @@
 {
  "version": 2,
  "startedAt": 1783879069125,
- "lastRun": 1790250360099,
+ "lastRun": 1790267004807,
  "strategies": {
   "ut-bot": {
    "portfolio": {
@@ -12,14 +12,14 @@
    "cycleUsdcReceived": 0,
    "closedTrades": 388,
    "wins": 40,
-   "failedOrders": 62
+   "failedOrders": 63
   },
   "stoch-rsi": {
    "portfolio": {
-    "sol": 0,
-    "usdc": 580.6107342090672
+    "sol": 4.939196345754118,
+    "usdc": 0
    },
-   "cycleUsdcSpent": 0,
+   "cycleUsdcSpent": 580.6107342090672,
    "cycleUsdcReceived": 0,
    "closedTrades": 88,
    "wins": 21,
@@ -38,10 +38,10 @@
   },
   "donchian": {
    "portfolio": {
-    "sol": 0,
-    "usdc": 810.0843770814962
+    "sol": 6.891384285570647,
+    "usdc": 0
    },
-   "cycleUsdcSpent": 0,
+   "cycleUsdcSpent": 810.0843770814962,
    "cycleUsdcReceived": 0,
    "closedTrades": 80,
    "wins": 17,
@@ -49,12 +49,12 @@
   },
   "bollinger": {
    "portfolio": {
-    "sol": 6.374933671135442,
-    "usdc": 0
+    "sol": 0,
+    "usdc": 744.4964108072946
    },
-   "cycleUsdcSpent": 745.2966071212484,
+   "cycleUsdcSpent": 0,
    "cycleUsdcReceived": 0,
-   "closedTrades": 59,
+   "closedTrades": 60,
    "wins": 16,
    "failedOrders": 13
   },
@@ -78,25 +78,25 @@
    "cycleUsdcReceived": 0,
    "closedTrades": 131,
    "wins": 29,
-   "failedOrders": 28
+   "failedOrders": 29
   },
   "vwap": {
    "portfolio": {
-    "sol": 8.851621224891273,
-    "usdc": 0
+    "sol": 0,
+    "usdc": 1033.7362820880103
    },
-   "cycleUsdcSpent": 1004.6377711897234,
+   "cycleUsdcSpent": 0,
    "cycleUsdcReceived": 0,
-   "closedTrades": 12,
-   "wins": 7,
+   "closedTrades": 13,
+   "wins": 8,
    "failedOrders": 2
   },
   "momentum": {
    "portfolio": {
-    "sol": 0,
-    "usdc": 839.4283917047941
+    "sol": 7.141020935498449,
+    "usdc": 0
    },
-   "cycleUsdcSpent": 0,
+   "cycleUsdcSpent": 839.4283917047941,
    "cycleUsdcReceived": 0,
    "closedTrades": 74,
    "wins": 21,
