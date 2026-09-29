@@ -1,14 +1,14 @@
 {
  "version": 2,
  "startedAt": 1783879069125,
- "lastRun": 1790656894983,
+ "lastRun": 1790677501496,
  "strategies": {
   "ut-bot": {
    "portfolio": {
-    "sol": 0,
-    "usdc": 93.67287411130802
+    "sol": 0.7805259832354644,
+    "usdc": 0
    },
-   "cycleUsdcSpent": 0,
+   "cycleUsdcSpent": 93.67287411130802,
    "cycleUsdcReceived": 0,
    "closedTrades": 396,
    "wins": 41,
@@ -49,12 +49,12 @@
   },
   "bollinger": {
    "portfolio": {
-    "sol": 6.1649382424764125,
-    "usdc": 0
+    "sol": 0,
+    "usdc": 734.8855298301226
    },
-   "cycleUsdcSpent": 744.4964108072946,
+   "cycleUsdcSpent": 0,
    "cycleUsdcReceived": 0,
-   "closedTrades": 60,
+   "closedTrades": 61,
    "wins": 16,
    "failedOrders": 13
   },
@@ -71,10 +71,10 @@
   },
   "macd": {
    "portfolio": {
-    "sol": 0,
-    "usdc": 597.9111504802071
+    "sol": 4.983150572668673,
+    "usdc": 0
    },
-   "cycleUsdcSpent": 0,
+   "cycleUsdcSpent": 597.9111504802071,
    "cycleUsdcReceived": 0,
    "closedTrades": 134,
    "wins": 30,
