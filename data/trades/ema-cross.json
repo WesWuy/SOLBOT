@@ -2929,5 +2929,16 @@
    "sol": 0,
    "usdc": 696.7949017178906
   }
+ },
+ {
+  "ts": 1792364855430,
+  "side": "buy",
+  "mid": 103.76081437980237,
+  "failed": true,
+  "reason": "EMA9 102.68 above EMA21 102.61 (order failed: random-failure)",
+  "portfolioAfter": {
+   "sol": 0,
+   "usdc": 696.7949017178906
+  }
  }
 ]
