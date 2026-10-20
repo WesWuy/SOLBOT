@@ -1,7 +1,7 @@
 {
  "version": 2,
  "startedAt": 1783879069125,
- "lastRun": 1792502121285,
+ "lastRun": 1792503024439,
  "strategies": {
   "ut-bot": {
    "portfolio": {
@@ -27,12 +27,12 @@
   },
   "ema-cross": {
    "portfolio": {
-    "sol": 6.666646837017608,
-    "usdc": 0
+    "sol": 0,
+    "usdc": 692.7263806039068
    },
-   "cycleUsdcSpent": 696.7949017178906,
+   "cycleUsdcSpent": 0,
    "cycleUsdcReceived": 0,
-   "closedTrades": 82,
+   "closedTrades": 83,
    "wins": 19,
    "failedOrders": 15
   },
@@ -93,12 +93,12 @@
   },
   "momentum": {
    "portfolio": {
-    "sol": 6.481949713628611,
-    "usdc": 0
+    "sol": 0,
+    "usdc": 673.5346380500968
    },
-   "cycleUsdcSpent": 680.1614316548696,
+   "cycleUsdcSpent": 0,
    "cycleUsdcReceived": 0,
-   "closedTrades": 89,
+   "closedTrades": 90,
    "wins": 22,
    "failedOrders": 21
   },
