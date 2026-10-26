@@ -1,14 +1,14 @@
 {
  "version": 2,
  "startedAt": 1783879069125,
- "lastRun": 1793006215068,
+ "lastRun": 1793029627520,
  "strategies": {
   "ut-bot": {
    "portfolio": {
-    "sol": 0,
-    "usdc": 56.75278060276474
+    "sol": 0.5531728332191812,
+    "usdc": 0
    },
-   "cycleUsdcSpent": 0,
+   "cycleUsdcSpent": 56.75278060276474,
    "cycleUsdcReceived": 0,
    "closedTrades": 449,
    "wins": 47,
@@ -27,10 +27,10 @@
   },
   "ema-cross": {
    "portfolio": {
-    "sol": 0,
-    "usdc": 646.7696798467347
+    "sol": 6.3061829890938395,
+    "usdc": 0
    },
-   "cycleUsdcSpent": 0,
+   "cycleUsdcSpent": 646.7696798467347,
    "cycleUsdcReceived": 0,
    "closedTrades": 88,
    "wins": 19,
@@ -38,10 +38,10 @@
   },
   "donchian": {
    "portfolio": {
-    "sol": 0,
-    "usdc": 622.0303643021753
+    "sol": 6.064960180459696,
+    "usdc": 0
    },
-   "cycleUsdcSpent": 0,
+   "cycleUsdcSpent": 622.0303643021753,
    "cycleUsdcReceived": 0,
    "closedTrades": 96,
    "wins": 20,
@@ -49,13 +49,13 @@
   },
   "bollinger": {
    "portfolio": {
-    "sol": 6.508594152204034,
-    "usdc": 0
+    "sol": 0,
+    "usdc": 663.1812746709045
    },
-   "cycleUsdcSpent": 656.2083209191875,
+   "cycleUsdcSpent": 0,
    "cycleUsdcReceived": 0,
-   "closedTrades": 71,
-   "wins": 19,
+   "closedTrades": 72,
+   "wins": 20,
    "failedOrders": 14
   },
   "rsi": {
@@ -71,10 +71,10 @@
   },
   "macd": {
    "portfolio": {
-    "sol": 0,
-    "usdc": 418.5063090037128
+    "sol": 4.0804815009554725,
+    "usdc": 0
    },
-   "cycleUsdcSpent": 0,
+   "cycleUsdcSpent": 418.5063090037128,
    "cycleUsdcReceived": 0,
    "closedTrades": 158,
    "wins": 31,
@@ -82,21 +82,21 @@
   },
   "vwap": {
    "portfolio": {
-    "sol": 9.251667997292882,
-    "usdc": 0
+    "sol": 0,
+    "usdc": 942.681757657144
    },
-   "cycleUsdcSpent": 955.8113627099088,
+   "cycleUsdcSpent": 0,
    "cycleUsdcReceived": 0,
-   "closedTrades": 16,
+   "closedTrades": 17,
    "wins": 10,
    "failedOrders": 2
   },
   "momentum": {
    "portfolio": {
-    "sol": 0,
-    "usdc": 630.7941422998267
+    "sol": 6.150412146138856,
+    "usdc": 0
    },
-   "cycleUsdcSpent": 0,
+   "cycleUsdcSpent": 630.7941422998267,
    "cycleUsdcReceived": 0,
    "closedTrades": 94,
    "wins": 22,
