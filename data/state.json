@@ -1,27 +1,27 @@
 {
  "version": 2,
  "startedAt": 1783879069125,
- "lastRun": 1793123466854,
+ "lastRun": 1793124369667,
  "strategies": {
   "ut-bot": {
    "portfolio": {
-    "sol": 0.5513242357853507,
-    "usdc": 0
+    "sol": 0,
+    "usdc": 55.33910358424666
    },
-   "cycleUsdcSpent": 55.417797005720395,
+   "cycleUsdcSpent": 0,
    "cycleUsdcReceived": 0,
-   "closedTrades": 451,
+   "closedTrades": 452,
    "wins": 47,
    "failedOrders": 80
   },
   "stoch-rsi": {
    "portfolio": {
-    "sol": 4.757719147548405,
-    "usdc": 0
+    "sol": 0,
+    "usdc": 477.55548485164337
    },
-   "cycleUsdcSpent": 480.4617474701533,
+   "cycleUsdcSpent": 0,
    "cycleUsdcReceived": 0,
-   "closedTrades": 106,
+   "closedTrades": 107,
    "wins": 27,
    "failedOrders": 18
   },
@@ -34,7 +34,7 @@
    "cycleUsdcReceived": 0,
    "closedTrades": 89,
    "wins": 19,
-   "failedOrders": 15
+   "failedOrders": 16
   },
   "donchian": {
    "portfolio": {
