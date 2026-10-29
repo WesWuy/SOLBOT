@@ -1,7 +1,7 @@
 {
  "version": 2,
  "startedAt": 1783879069125,
- "lastRun": 1793246782938,
+ "lastRun": 1793247685776,
  "strategies": {
   "ut-bot": {
    "portfolio": {
@@ -27,12 +27,12 @@
   },
   "ema-cross": {
    "portfolio": {
-    "sol": 6.055745168169626,
-    "usdc": 0
+    "sol": 0,
+    "usdc": 601.3856156504219
    },
-   "cycleUsdcSpent": 619.918923060591,
+   "cycleUsdcSpent": 0,
    "cycleUsdcReceived": 0,
-   "closedTrades": 90,
+   "closedTrades": 91,
    "wins": 19,
    "failedOrders": 16
   },
