@@ -3285,5 +3285,22 @@
    "sol": 6.394952713647066,
    "usdc": 0
   }
+ },
+ {
+  "ts": 1793757072990,
+  "side": "sell",
+  "mid": 91.74090200407562,
+  "failed": false,
+  "fillPrice": 91.60329065106951,
+  "solDelta": -6.395152713647066,
+  "usdcDelta": 584.7735643818338,
+  "feeUsdc": 1.0251477462241014,
+  "txCostSol": 0.0002,
+  "slippagePct": 0.0015,
+  "reason": "EMA9 93.03 below EMA21 93.12",
+  "portfolioAfter": {
+   "sol": 0,
+   "usdc": 584.7735643818338
+  }
  }
 ]
