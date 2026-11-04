@@ -1,7 +1,7 @@
 {
  "version": 2,
  "startedAt": 1783879069125,
- "lastRun": 1793783782247,
+ "lastRun": 1793810842916,
  "strategies": {
   "ut-bot": {
    "portfolio": {
@@ -27,10 +27,10 @@
   },
   "ema-cross": {
    "portfolio": {
-    "sol": 0,
-    "usdc": 584.7735643818338
+    "sol": 6.021876084844926,
+    "usdc": 0
    },
-   "cycleUsdcSpent": 0,
+   "cycleUsdcSpent": 584.7735643818338,
    "cycleUsdcReceived": 0,
    "closedTrades": 92,
    "wins": 19,
@@ -38,10 +38,10 @@
   },
   "donchian": {
    "portfolio": {
-    "sol": 0,
-    "usdc": 583.4094122514198
+    "sol": 6.007827864437869,
+    "usdc": 0
    },
-   "cycleUsdcSpent": 0,
+   "cycleUsdcSpent": 583.4094122514198,
    "cycleUsdcReceived": 0,
    "closedTrades": 99,
    "wins": 20,
@@ -60,12 +60,12 @@
   },
   "rsi": {
    "portfolio": {
-    "sol": 10.301500294988008,
-    "usdc": 0
+    "sol": 0,
+    "usdc": 993.8428687336174
    },
-   "cycleUsdcSpent": 1076.1379681593558,
+   "cycleUsdcSpent": 0,
    "cycleUsdcReceived": 0,
-   "closedTrades": 17,
+   "closedTrades": 18,
    "wins": 10,
    "failedOrders": 3
   },
@@ -89,7 +89,7 @@
    "cycleUsdcReceived": 0,
    "closedTrades": 18,
    "wins": 11,
-   "failedOrders": 2
+   "failedOrders": 3
   },
   "momentum": {
    "portfolio": {
@@ -100,7 +100,7 @@
    "cycleUsdcReceived": 0,
    "closedTrades": 99,
    "wins": 22,
-   "failedOrders": 23
+   "failedOrders": 24
   },
   "grid": {
    "portfolio": {
