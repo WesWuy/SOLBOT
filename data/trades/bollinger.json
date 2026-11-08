@@ -2753,5 +2753,22 @@
    "sol": 7.051926252906556,
    "usdc": 0
   }
+ },
+ {
+  "ts": 1794137956709,
+  "side": "sell",
+  "mid": 89.55052365893862,
+  "failed": false,
+  "fillPrice": 89.41619787345022,
+  "solDelta": -7.0521262529065565,
+  "usdcDelta": 629.4529594607378,
+  "feeUsdc": 1.103473758133024,
+  "txCostSol": 0.0002,
+  "slippagePct": 0.0015,
+  "reason": "close 89.55 at/above middle band 89.51",
+  "portfolioAfter": {
+   "sol": 0,
+   "usdc": 629.4529594607378
+  }
  }
 ]
