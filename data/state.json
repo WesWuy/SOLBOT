@@ -1,7 +1,7 @@
 {
  "version": 2,
  "startedAt": 1783879069125,
- "lastRun": 1794575940058,
+ "lastRun": 1794576842961,
  "strategies": {
   "ut-bot": {
    "portfolio": {
@@ -49,12 +49,12 @@
   },
   "bollinger": {
    "portfolio": {
-    "sol": 7.302908156465095,
-    "usdc": 0
+    "sol": 0,
+    "usdc": 596.0801340412598
    },
-   "cycleUsdcSpent": 598.3130722830973,
+   "cycleUsdcSpent": 0,
    "cycleUsdcReceived": 0,
-   "closedTrades": 79,
+   "closedTrades": 80,
    "wins": 22,
    "failedOrders": 14
   },
@@ -104,11 +104,11 @@
   },
   "grid": {
    "portfolio": {
-    "sol": 3.7737813071172495,
-    "usdc": 710.7315777728795
+    "sol": 2.4904142246643657,
+    "usdc": 815.4666216921605
    },
    "cycleUsdcSpent": 514.0065811005604,
-   "cycleUsdcReceived": 209.40745356838266,
+   "cycleUsdcReceived": 314.14249748766366,
    "closedTrades": 2,
    "wins": 2,
    "failedOrders": 15
