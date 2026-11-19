@@ -694,5 +694,16 @@
    "sol": 10.192198846009264,
    "usdc": 0
   }
+ },
+ {
+  "ts": 1795082552137,
+  "side": "sell",
+  "mid": 74.50596340520147,
+  "failed": true,
+  "reason": "close 74.51 reverted to 24h TWAP 74.46 (order failed: random-failure)",
+  "portfolioAfter": {
+   "sol": 10.192198846009264,
+   "usdc": 0
+  }
  }
 ]
